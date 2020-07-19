@@ -1,0 +1,8 @@
+# CVersion v1.0
+# Created by CodeError
+
+# Version string displayed to client when server is pinged.
+version-string: "Epic Server"
+
+# Protocol number sent to client when server is pinged. (https://wiki.vg/Protocol_version_numbers)
+protocol-number: 47
