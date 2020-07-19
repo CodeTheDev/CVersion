@@ -1,0 +1,36 @@
+name: CVersion
+version: 1.0
+api-version: 1.15
+description: A simple plugin to change server version strings and protocol numbers.
+author: CodeError
+website: https://www.codeslab.ca/
+main: net.CodeError.cversion.CVersion
+load: STARTUP
+depend: [ProtocolLib]
+commands:
+    cversion:
+       description: Root command for CVersion.
+       aliases: [cver, cv]
+permissions:
+    cversion.*:
+        description: Grants access to all permission nodes in CVersion.
+        default: op
+        children:
+            cversion.reload: true
+            cversion.set.version: true
+            cversion.set.protocol: true
+    cversion.set.*:
+        description: Grants access to all set permission nodes in CVersion.
+        default: op
+        children:
+            cversion.set.version: true
+            cversion.set.protocol: true
+    cversion.reload:
+        description: Allows a user to reload CVersion.
+        default: op
+    cversion.set.version:
+        description: Allows a user to set version string.
+        default: op
+    cversion.set.protocol:
+        description: Allows a user to set protocol number.
+        default: op
