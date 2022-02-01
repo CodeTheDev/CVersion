@@ -47,13 +47,13 @@ public class CVersion extends JavaPlugin implements CommandExecutor, TabComplete
 		this.getCommand("cversion").setExecutor(this);
 		this.getCommand("cversion").setTabCompleter(this);
 
-		this.getLogger().info("CVersion v1.0 has been successfully enabled! Created by CodeError.");
+		this.getLogger().info("CVersion v1.0.1 has been successfully enabled! Created by CodeError.");
 
 	}
 
 	@Override
 	public void onDisable() {
-		this.getLogger().info("CVersion v1.0 has been disabled.");
+		this.getLogger().info("CVersion v1.0.1 has been disabled.");
 	}
 
 	private void pingPacket(WrappedServerPing ping) {
@@ -68,7 +68,7 @@ public class CVersion extends JavaPlugin implements CommandExecutor, TabComplete
 
 			if (!(sender instanceof Player)) return false;
 
-			sender.sendMessage(chatPrefix + ChatColor.GOLD + "CVersion v1.0 - Created by " + ChatColor.RED + "CodeError");
+			sender.sendMessage(chatPrefix + ChatColor.GOLD + "CVersion v1.0.1 - Created by " + ChatColor.RED + "CodeError");
 			sender.sendMessage(chatPrefix + ChatColor.GRAY + "Plugin Help: " + ChatColor.WHITE + "/cversion help");
 
 			return true;
@@ -79,7 +79,7 @@ public class CVersion extends JavaPlugin implements CommandExecutor, TabComplete
 
 				if (!(sender instanceof Player)) return false;
 
-				sender.sendMessage(chatPrefix + ChatColor.GOLD + "CVersion v1.0 - " + ChatColor.RED + "Plugin Help");
+				sender.sendMessage(chatPrefix + ChatColor.GOLD + "CVersion v1.0.1 - " + ChatColor.RED + "Plugin Help");
 				sender.sendMessage(chatPrefix + ChatColor.GRAY + "/cversion reload - " + ChatColor.WHITE + "Reloads the plugin.");
 
 				return true;
