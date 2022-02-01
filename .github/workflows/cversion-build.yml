@@ -1,0 +1,30 @@
+name: CVersion
+
+on: [push]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+      
+      - name: Set Up Java 8
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+          distribution: 'adopt-openj9'
+        
+      - name: Build (w/ Maven)
+        run: mvn -B package --file pom.xml
+      
+      - name: Set Up Staging
+        run: mkdir staging && cp target/CVersion.jar staging
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: CVersion
+          path: staging
