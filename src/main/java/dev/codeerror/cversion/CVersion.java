@@ -1,4 +1,4 @@
-package net.CodeError.cversion;
+package dev.codeerror.cversion;
 
 import java.util.ArrayList;
 import java.util.Arrays;

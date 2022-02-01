@@ -1,10 +1,10 @@
 name: CVersion
 version: 1.0
 api-version: 1.17
-description: A simple plugin to change server version strings and protocol numbers.
+description: A simple plugin to change Spigot server version strings and protocol numbers.
 author: CodeError
 website: https://www.codeslab.ca/
-main: net.CodeError.cversion.CVersion
+main: dev.codeerror.cversion.CVersion
 load: STARTUP
 depend: [ProtocolLib]
 commands:
